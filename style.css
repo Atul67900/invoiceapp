@@ -1,0 +1,598 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .view-btn-output-area{
+    background: pink;
+} */
+#actives{
+    background: var(--blue);
+}
+:root{
+    --bg: #f5ecff;
+    --blue: #091540;
+    --light-blue: #0d2169;
+}
+main{
+    background: var(--bg);
+    /* height: 100vh; */
+    padding: 20px;
+}
+.container-sub{
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px dotted var(--blue);
+}
+.left-container{
+    width: 20%;
+    padding: 5px;
+    /* border-radius: 10px; */
+    /* padding: 5px; */
+    display: block;
+    background: var(--light-blue);
+    /* text-align: center; */
+}
+.right-container{
+    width: 75%;
+}
+.bussiness-name{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background: var(--blue);
+    color: var(--bg);
+}
+.heading{
+    text-align: center;
+    padding: 20px 0;
+    color: var(--bg);
+    font-family: 'DynaPuff', cursive;;
+}
+.upgrade-btn button{
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0;
+    
+}
+.list-group{
+    background: var(--light-blue);
+}
+.list-group li{
+    background: var(--light-blue);
+    color: var(--bg);
+    padding: 20px 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.list-group li:hover{
+    background: var(--blue);
+}
+
+
+
+
+.button-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: black;
+    z-index: 1;
+   }
+   
+   .button-btn:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button-btn:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button-btn:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+   }
+   
+   .button-btn:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+   
+   .button-btn:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+
+.nav-bar{
+    background: var(--bg);
+    width: 100%;
+    border: 1px solid var(--blue);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-bar-left{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-bar-right{
+    width: 10%;
+    display: flex;
+}
+.main-area{
+    width: 100%;
+    background: var(--bg);
+    padding: 10px;
+    border: 1px solid var(--blue);
+}
+.areas{
+    background: #fff;
+    padding: 10px;
+    border: 1px dashed var(--blue);
+    width: 100%;
+}
+.dashboard-area{
+    
+    padding: 30px;
+    text-align: center;
+    /* display: none; */
+}
+.dashboard-area h1{
+    font-size: 70px;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--light-blue), red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+
+
+
+/* Invoive Creation Area */
+
+
+.create-area{
+    display: none;
+}
+
+
+.mainRow{
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+.left-row-area{
+    width: 40%;
+    display: flex;
+    justify-content: right;
+}
+.right-row-area{
+    width: 40%;
+    display: flex;
+    justify-content: right;
+}
+.left-input{
+    display: flex;
+    justify-content: right;
+}
+
+/* item-details-area */
+
+.item-details-area{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--blue);
+}
+.item-details-area-nav{
+    width: 100%;
+    /* border: 1px solid var(--blue); */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.sr-col{
+    /* border: 1px solid #333; */
+    width: 8%;
+    /* padding: 5px 0; */
+}
+
+.description-col{
+    /* border: 1px solid #333; */
+    width: 45%;
+    padding: 5px 0;
+}
+.qty-col{
+    /* border: 1px solid #333; */
+    width: 8%;
+    padding: 5px 0;
+}
+.unit-col{
+    /* border: 1px solid #333; */
+    width: 8%;
+    padding: 5px 0;
+}
+.rate-col{
+    /* border: 1px solid #333; */
+    width: 8%;
+    padding: 5px 0;
+}
+.amt-col{
+    /* border: 1px solid #333; */
+    width: 15%;
+    padding: 5px 0;
+}
+.item-details-area-nav p{
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.inputs-main{
+    width: 100%;
+    border: 2px dashed #333;
+}
+.item-details-area-inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item-details-area-inputs input{
+    width: 100%;
+}
+
+
+/* calculation Area */
+
+
+.calculate-main{
+    width: 100%;
+    border: 2px dotted #000;
+}
+.calculate-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.calculate-nav p{
+    margin-bottom: 0;
+}
+.calculate-inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cols{
+    width: 15%;
+    text-align: center;
+    font-weight: 600;
+}
+.calculate-inputs input{
+    width: 100%;
+    text-align: center;
+}
+
+
+.printbtn{
+    display: none;
+}
+
+
+
+/* invoice print template */
+
+
+
+.modalArea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-dialog{
+    background: #fff;
+}
+.modal-content{
+    background: #fff;
+}
+
+#modal-header{
+    padding: 0 10px;
+    margin: 0;
+    border-bottom: none;
+}
+
+.output-top-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.output-top-area-left{
+    width: 48%;
+    display: block;
+}
+.output-top-area-right{
+    width: 48%;
+    display: block;
+}
+.output-logp-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+}
+.output-shipper{
+    width: 100%;
+    padding: 5px;
+}
+.outputt h5{
+    background: rgb(232, 231, 231);
+    padding: 5px;
+}
+.outputtt h6{
+    background: rgb(232, 231, 231);
+    padding: 5px;
+}
+.output-shipper h6{
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+}
+.outputt p{
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    /* font-size: 18px; */
+}
+.outputtt p{
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    /* font-size: 18px; */
+}
+
+
+
+
+.outputMiddleArea{
+    width: 100%;
+    border: 1px solid #000;
+    height: 300px;
+}
+.output-top-row{
+    background: rgb(232, 231, 231);
+    /* padding: 5px; */
+    display: flex;
+}
+.blocks{
+    border: 0.5px solid #000;
+    padding: 5px;
+    text-align: center;
+}
+.srNoOutput{
+    width: 10%;
+    /* border-left: 1px solid #999; */
+}
+.descriptionOutput{
+    width: 45%;
+    padding: 0 10px;
+    /* border-left: 1px solid #999; */
+}
+
+.qtyOutput{
+    width: 10%;
+    padding: 0 10px;
+    text-align: center;
+    /* border-left: 1px solid #999; */
+}
+.unitOutput{
+    width: 10%;
+    text-align: center;
+    padding: 0 10px;
+    /* border-left: 1px solid #999; */
+}
+.rateOutput{
+    width: 10%;
+    padding: 0 10px;
+    text-align: center;
+    /* border-left: 1px solid #999; */
+}
+.amtOutput{
+    width: 15%;
+    padding: 0 10px;
+    text-align: right;
+    /* border-left: 1px solid #999; */
+}
+
+.output-matter-area{
+    display: flex;
+}
+
+.outputBottomArea{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.outputBottomArea-left{
+    width: 40%;
+}
+
+.outputBottomArea-right{
+    width: 40%;
+    text-align: right;
+}
+
+#modal-footer{
+    padding: 10px;
+}
+
+
+
+
+
+
+
+/* Invoices List Area */
+
+
+
+.invoice-list-main{
+    display: none;
+    background: #fff;
+    padding: 10px;
+    /* max-height: 500px; */
+}
+.invoicea-list-row-nav-inside{
+    width: 100%;
+    background: var(--light-blue);
+}
+.invoicea-list-row-nav{
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    width: 93%;
+    text-align: left;
+    /* padding: 10px; */
+}
+.heading-date{
+    width: 0%;
+    /* padding: 0 10px; */
+}
+.heading-extra{
+    width: 10px;
+}
+.invoice-list-area{
+    padding: 10px;
+    display: block;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.invoices-data-main{
+    display: flex;
+    width: 100%;
+}
+.dyanmically-invoice-list-area{
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    
+}
+.invoices-data{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+}
+.dateInvoiceList-block{
+    width: 20%;
+}
+.invoiceNumberInvoiceList-block{
+    width: 15%;
+}
+.partyNameInvoiceList-block{
+    width: 45%;
+}
+.amountInvoiceList-block{
+    width: 15%;
+}
+.block{
+    border: 1px solid #333;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+
+@media print{
+    .modal{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+    }
+    .modal-area{
+        display: none;
+    }
+    .fade{
+        padding: 0;
+        margin: 0;
+    }
+    .show{
+        padding: 0;
+        margin: 0;
+    }
+    .btn-close{
+        display: none;
+    }
+    #modal-footer{
+        display: none;
+
+    }
+    #modal-body{
+        padding: 0;
+    }
+    .container-fluid{
+        height: 90vh;
+    }
+    .outputBottomArea{
+        position: absolute;
+        bottom: 0;
+        width: 95%;
+    }
+    .outputt h5{
+    background: rgb(232, 231, 231);
+    }
+    .outputtt h6{
+    background: rgb(232, 231, 231);
+    }
+}

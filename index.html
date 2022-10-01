@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="container-sub">
+                <div class="left-container">
+                    <div class="bussiness-name">
+                        <h3>Your Bussiness</h3>
+                    </div>
+                    <div class="heading">
+                        <h1>Invoicely</h1>
+                    </div>
+                    <div class="upgrade-btn d-grid gap-2">
+                        <button type="button" class="btn btn-lg btn-warning">Upgrade</button>
+                    </div>
+                    <ul class="list-group my-5">
+
+
+                        <li class="list-group-item Dashboard" id="actives" onclick="dashboard()">
+                            <lord-icon src="https://cdn.lordicon.com/igpbsrza.json" trigger="morph"
+                                colors="primary:#fff" style="width:50px;height:30px">
+                            </lord-icon>Dashboard
+                        </li>
+                        <li class="list-group-item newInvoice" onclick="newInvoice()">
+                            <lord-icon src="https://cdn.lordicon.com/ofqzcdla.json" trigger="hover"
+                                colors="primary:#fff" style="width:50px;height:30px">
+                            </lord-icon>New Invoice
+                        </li>
+                        <li class="list-group-item">
+                            <lord-icon src="https://cdn.lordicon.com/sihdhmit.json" trigger="hover"
+                                colors="primary:#fff" style="width:50px;height:30px">
+                            </lord-icon>Update Invoice
+                        </li>
+                        <li class="list-group-item invoiceList" onclick="invoiceList()">
+                            <lord-icon src="https://cdn.lordicon.com/zjptfwtq.json" trigger="morph"
+                                colors="primary:#fff" style="width:50px;height:30px">
+                            </lord-icon>Invoice Lists
+                        </li>
+                        <li class="list-group-item">
+                            <lord-icon src="https://cdn.lordicon.com/dklbhvrt.json" trigger="hover"
+                                colors="primary:#fff" style="width:50px;height:30px">
+                            </lord-icon>Party Master
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-container">
+                    <div class="nav-bar">
+                        <div class="nav-bar-left">
+                            <button class="btn btn-sm btn-warning">
+                                <lord-icon src="https://cdn.lordicon.com/eflfmgmj.json" trigger="hover"
+                                    style="width:30px;height:30px">
+                                </lord-icon>Invoices
+                            </button>
+                            <h3>New Invoice</h3>
+                        </div>
+
+                        <div class="nav-bar-right">
+                            <button class="btn btn-sm btn-success">
+                                <lord-icon src="https://cdn.lordicon.com/njjuilvq.json" trigger="hover"
+                                    style="width:30px;height:30px">
+                                </lord-icon> Help
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div class="main-area my-4">
+                        <div class="dashboard-area areas my-5">
+                            <h1>Welcome to Invoice App</h1>
+                            <button class="btn btn-lg btn-warning my-4">
+                                <lord-icon src="https://cdn.lordicon.com/iifryyua.json" trigger="hover"
+                                    style="width:50px;height:40px">
+                                </lord-icon>Let's Started
+                            </button>
+
+                            <p class="my-4">
+                                <lord-icon src="https://cdn.lordicon.com/aixyixpa.json" trigger="hover"
+                                    style="width:50px;height:30px">
+                                </lord-icon>This is to inform you that this Invoice App is total professional. You can
+                                use this app to make invoices for your Enterprise/Company. For more information please
+                                <a href="">Click Here</a>
+                            </p>
+                        </div>
+
+
+
+                        <!-- NEW INVOICE CREATE SECTION -->
+
+
+
+                        <div class="create-area areas my-3">
+                            <!-- Alert -->
+                            <div id="message">
+                                <!-- <strong>Success!</strong> Your Invoice Has been Successfully created .
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+                            </div>
+
+
+                            <!-- <div class="view-btn-output-area">
+                            
+                            </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+
+                            <div class="mainRow">
+                                <div class="left-row-area">
+                                    <div class="left-label">
+                                        <label>Invoice No.</label>
+                                    </div>
+                                    <div class="left-input">
+                                        <input type="number" id="invoiceNumberAuto" class="mx-2" value="00001">
+                                    </div>
+                                </div>
+
+                                <div class="right-row-area">
+                                    <div class="right-label">
+                                        <label>Invoice Date</label>
+                                    </div>
+                                    <div class="right-input">
+                                        <input type="text" class="mx-2" id="invoiceDateAuto" style="width: 185px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mainRow">
+                                <div class="left-row-area">
+                                    <div class="left-label">
+                                        <label>Party's Name</label>
+                                    </div>
+                                    <div class="left-input">
+                                        <input type="text" id="partyNameAuto" class="mx-2">
+                                    </div>
+                                </div>
+
+                                <div class="right-row-area">
+                                    <div class="right-label">
+                                        <label>No. of Pkt</label>
+                                    </div>
+                                    <div class="right-input">
+                                        <input type="number" id="nopAuto" class="mx-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mainRow">
+                                <div class="left-row-area">
+                                    <div class="left-label">
+                                        <label>Party's Address</label>
+                                    </div>
+                                    <div class="left-input">
+                                        <textarea cols="23" id="addressAuto" rows="3" class="mx-2"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="right-row-area">
+                                    <div class="right-label">
+                                        <label>Transport</label>
+                                    </div>
+                                    <div class="right-input">
+                                        <select class="mx-2" id="transportAuto" style="width: 185px;">
+                                            <option>BlueDart</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mainRow">
+                                <div class="left-row-area">
+                                    <div class="left-label">
+                                        <label>State</label>
+                                    </div>
+                                    <div class="left-input">
+                                        <input list="State" id="stateAuto" class="mx-2">
+                                        <datalist id="State">
+                                            <option value="SELECT">
+                                            <option value="Andhra Pradesh">
+                                            <option value="Arunachal Pradesh">
+                                            <option value="Assam">
+                                            <option value="Bihar">
+                                            <option value="Chhattisgarh">
+                                            <option value="Goa">
+                                            <option value="Gujarat">
+                                            <option value="Haryana">
+                                            <option value="Himachal Pradesh">
+                                            <option value="Jharkhand">
+                                            <option value="Karnataka">
+                                            <option value="Kerala">
+                                            <option value="Madhya Pradesh">
+                                            <option value="Maharashtra">
+                                            <option value="Manipur">
+                                            <option value="Meghalaya">
+                                            <option value="Mizoram">
+                                            <option value="Nagaland">
+                                            <option value="Odisha">
+                                            <option value="Punjab">
+                                            <option value="Rajasthan">
+                                            <option value="Sikkim">
+                                            <option value="Tamil Nadu">
+                                            <option value="Telangana">
+                                            <option value="Tripura">
+                                            <option value="Uttar Pradesh">
+                                            <option value="Uttarakhand">
+                                            <option value="West Bengal">
+                                            <option value="Andaman and Nicobar Islands">
+                                            <option value="Chandigarh">
+                                            <option value="Dadra & Nagar Haveli and Daman & Diu">
+                                            <option value="Delhi">
+                                            <option value="Jammu and Kashmir">
+                                            <option value="Lakshadweep">
+                                            <option value="Puducherry">
+                                            <option value="Ladakh">
+                                        </datalist>
+                                    </div>
+                                </div>
+
+                                <div class="right-row-area">
+                                    <div class="right-label">
+                                        <label>GST No.</label>
+                                    </div>
+                                    <div class="right-input">
+                                        <input type="text" id="gstinAuto" class="mx-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mainRow">
+                                <div class="left-row-area">
+                                    <div class="left-label">
+                                        <label>Mobile No.</label>
+                                    </div>
+                                    <div class="left-input">
+                                        <input type="number" id="mblAuto" class="mx-2">
+                                    </div>
+                                </div>
+
+                                <div class="right-row-area">
+                                    <div class="right-label">
+                                        <label>Place of Supply</label>
+                                    </div>
+                                    <div class="right-input">
+                                        <input type="text" id="placeOfSupplyAuto" class="mx-2">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Product Description Area -->
+                            <div class="item-details-area">
+                                <div class="item-details-area-nav">
+                                    <div class="sr-col">
+                                        <p>Sr No.</p>
+                                    </div>
+                                    <div class="description-col">
+                                        <p>Item Description</p>
+                                    </div>
+                                    <div class="qty-col">
+                                        <p>Qty</p>
+                                    </div>
+                                    <div class="unit-col">
+                                        <p>Unit</p>
+                                    </div>
+                                    <div class="rate-col">
+                                        <p>Rate</p>
+                                    </div>
+                                    <div class="amt-col">
+                                        <p>Amount</p>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary" id="addRows">Add</button>
+                                </div>
+                                <div class="inputs-main my-1" id="addRow">
+                                    <div class="item-details-area-inputs">
+                                        <div class="sr-col"><input type="number" style="text-align: center;" value="01">
+                                        </div>
+                                        <div class="description-col">
+                                            <input type="text" list="items" class="description" id="description">
+                                            <datalist id="items">
+                                                <option value="Item 1">
+                                                <option value="Item 2">
+                                                <option value="Item 3">
+                                                <option value="Item 4">
+                                            </datalist>
+                                        </div>
+                                        <div class="qty-col"><input type="number" class="quantities" value=""
+                                                style="text-align: center;" id="qty"></div>
+                                        <div class="unit-col"><select class="units" id="unit">
+                                                <option>Pcs</option>
+                                                <option>Kgs</option>
+                                                <option>Ltr</option>
+                                                <option>Pair</option>
+                                                <option>Dozen</option>
+                                            </select></div>
+                                        <div class="rate-col"><input type="number" class="rates" value=""
+                                                style="text-align: center;" id="rate"></div>
+                                        <div class="amt-col amounts"
+                                            style="text-align: right; border: 1px solid #000; padding: 0 10px;"
+                                            class="amt" id="amount">00</div>
+
+                                        <button class="btn btn-sm btn-danger deleteRow">-</button>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <!-- calculation Area -->
+
+
+                            <div class="calculate-main my-3    ">
+                                <div class="calculate-nav">
+                                    <div class="cols">
+                                        <p>Taxable Amt</p>
+                                    </div>
+                                    <div class="cols">
+                                        <p>Tax</p>
+                                    </div>
+                                    <div class="cols">
+                                        <p>Total</p>
+                                    </div>
+                                    <div class="cols">
+                                        <p>Shipping</p>
+                                    </div>
+                                    <div class="cols">
+                                        <p>Round Off</p>
+                                    </div>
+                                    <div class="cols">
+                                        <p>Grand Total</p>
+                                    </div>
+                                </div>
+                                <div class="calculate-inputs">
+                                    <div class="cols taxableAmt" style="border: 1px solid #333;" id="taxableAmt">0000
+                                    </div>
+                                    <div class="cols" style="border: 1px solid #333;" id="tax">0000</div>
+                                    <div class="cols" style="border: 1px solid #333;" id="totalAmt">0000</div>
+                                    <div class="cols">
+                                        <input type="number" id="shipping" value="0.00">
+                                    </div>
+                                    <div class="cols">
+                                        <input type="text" id="roundOff" value="0.00">
+                                    </div>
+                                    <div class="cols" id="grandTotal" style="border: 1px solid #333;">0000</div>
+                                </div>
+                            </div>
+                            <div class="access-controls-area" style="text-align: left;">
+                                <button class="btn btn-lg btn-success" id="saveInvoiceBtn">Save</button>
+                                <button class="btn btn-lg btn-danger" id="resetBtn">Reset</button>
+                            </div>
+                        </div>
+
+
+                        <!-- Invoices list Area -->
+
+
+                        <div class="invoice-list-main">
+                            <h1>Invoices List</h1>
+                            <div class="invoicea-list-row-nav-inside">
+                                <div class="invoicea-list-row-nav">
+                                    <div class="heading-date headings"><h6>Invoice Date</h6></div>
+                                    <div class="heading-invoiceNo headings"><h6>Invoice No.</h6></div>
+                                    <div class="heading-party headings"><h6>Party's Name</h6></div>
+                                    <div class="heading-amount headings"><h6>Amount</h6></div>
+                                </div>
+                            </div>
+                            <div class="invoice-list-area my-3">
+                                <div class="dyanmically-invoice-list-area">
+                                </div>
+                                <!-- <div class="invoices-data">
+                                    <div class="amountInvoiceList-block block">11800</div>
+                                    <div class="partyNameInvoiceList-block block">Two Moustahes</div>
+                                    <div class="invoiceNumberInvoiceList-block block">00001</div>
+                                    <div class="dateInvoiceList-block block">22-08-2022</div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="file.js"></script>
+    <script src="templates.js"></script>
+    <!-- <script src="date.js"></script> -->
+</body>
+
+</html>
